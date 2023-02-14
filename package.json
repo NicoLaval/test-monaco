@@ -37,6 +37,7 @@
     "files": [
         "src/",
         "!src/test/",
+        "!src/stories/",
         "dist/",
         "!dist/test/",
         "!dist/tsconfig.tsbuildinfo"
