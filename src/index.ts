@@ -1,2 +1,1 @@
-export * from "./myFunction";
-export * from "./myObject";
+export { default } from "./editor";

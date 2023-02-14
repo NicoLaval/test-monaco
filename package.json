@@ -1,10 +1,10 @@
 {
-    "name": "#{REPO_NAME}#",
+    "name": "test-monaco",
     "version": "0.0.0",
-    "description": "#{DESC}#",
+    "description": "TODO",
     "repository": {
         "type": "git",
-        "url": "git://github.com/#{USER_OR_ORG}#/#{REPO_NAME}#.git"
+        "url": "git://github.com/TODO/TODO.git"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -15,7 +15,9 @@
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
-        "format:check": "npm run _format -- --list-different"
+        "format:check": "npm run _format -- --list-different",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -30,7 +32,7 @@
             "pre-commit": "lint-staged -v"
         }
     },
-    "author": "u/#{USER_OR_ORG}#",
+    "author": "u/TODO",
     "license": "MIT",
     "files": [
         "src/",
@@ -40,16 +42,30 @@
         "!dist/tsconfig.tsbuildinfo"
     ],
     "keywords": [],
-    "homepage": "https://github.com/#{USER_OR_ORG}#/#{REPO_NAME}#",
+    "homepage": "https://github.com/TODO/TODO",
     "devDependencies": {
+        "@babel/core": "^7.20.12",
+        "@storybook/addon-actions": "^6.5.16",
+        "@storybook/addon-essentials": "^6.5.16",
+        "@storybook/addon-interactions": "^6.5.16",
+        "@storybook/addon-links": "^6.5.16",
+        "@storybook/builder-webpack4": "^6.5.16",
+        "@storybook/manager-webpack4": "^6.5.16",
+        "@storybook/react": "^6.5.16",
+        "@storybook/testing-library": "^0.0.13",
         "@types/node": "^16.4.9",
-        "typescript": "^4.3.5",
+        "@types/react": "^18.0.28",
         "@typescript-eslint/eslint-plugin": "^4.28.5",
         "@typescript-eslint/parser": "^4.28.5",
+        "babel-loader": "^8.3.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-storybook": "^0.6.10",
         "husky": "^4.3.8",
         "lint-staged": "^11.1.1",
-        "prettier": "^2.3.2"
+        "prettier": "^2.3.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^4.3.5"
     }
 }
